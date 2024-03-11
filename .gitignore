@@ -3,28 +3,27 @@
 #
 #Generic
 #
-
 .directory
 .mailmap
-*.orig
-*.rej
-*.*~
-.hg/
-*.kdev*
+* .orig
+* .rej
+* .*~
+.hg /
+*.kdev *
 .DS_Store
 CMakeLists.txt.user
-*.bak
-*.patch
-*.diff
-*.REMOTE.*
-*.BACKUP.*
-*.BASE.*
-*.LOCAL.*
+* .bak
+* .patch
+* .diff
+* .REMOTE.*
+* .BACKUP.*
+* .BASE.*
+* .LOCAL.*
 
 #
 # IDE & other softwares
 #
-/.settings/
+/ .settings/
 /.externalToolBuilders/*
 # exclude in all levels
 nbproject/

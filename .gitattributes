@@ -2,7 +2,7 @@
 ##   Handle line endings automatically for files detected as
 ##   text and leave all files detected as binary untouched.
 ##   This will handle all files NOT defined below.
-*   text=auto eol=lf
+* text eol=lf
 
 # Text
 *.conf text
@@ -28,20 +28,19 @@
 *.h++ text
 *.hh text
 
-
 ## For documentation
 
 # Documents
-*.doc	 diff=astextplain
-*.DOC	 diff=astextplain
-*.docx diff=astextplain
-*.DOCX diff=astextplain
-*.dot  diff=astextplain
-*.DOT  diff=astextplain
-*.pdf  diff=astextplain
-*.PDF	 diff=astextplain
-*.rtf	 diff=astextplain
-*.RTF	 diff=astextplain
+*.doc   diff=astextplain
+*.DOC   diff=astextplain
+*.docx  diff=astextplain
+*.DOCX  diff=astextplain
+*.dot   diff=astextplain
+*.DOT   diff=astextplain
+*.pdf   diff=astextplain
+*.PDF   diff=astextplain
+*.rtf   diff=astextplain
+*.RTF   diff=astextplain
 
 ## DOCUMENTATION
 *.markdown   text
@@ -59,13 +58,13 @@ CHANGES      text
 CONTRIBUTING text
 COPYING      text
 copyright    text
-*COPYRIGHT*  text
+COPYRIGHT    text
 INSTALL      text
 license      text
 LICENSE      text
 NEWS         text
 readme       text
-*README*     text
+README       text
 TODO         text
 
 ## GRAPHICS

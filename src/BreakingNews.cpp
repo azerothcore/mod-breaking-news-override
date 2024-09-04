@@ -116,7 +116,7 @@ void LoadBreakingNews()
         return;
     }
 
-    bn_Formatted = Acore::StringFormatFmt(_midPayloadFmt, bn_Title, bn_Body);
+    bn_Formatted = Acore::StringFormat(_midPayloadFmt, bn_Title, bn_Body);
 }
 
 bool BreakingNewsServerScript::CanPacketSend(WorldSession* session, WorldPacket& packet)

@@ -151,7 +151,7 @@ void BreakingNewsWorldScript::OnAfterConfigLoad(bool /*reload*/)
     LoadBreakingNews();
 }
 
-// Add all scripts in one
+// Add all scripts in one.
 void AddBreakingNewsScripts()
 {
     new BreakingNewsWorldScript();

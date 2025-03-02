@@ -1,14 +1,14 @@
 #ifndef MODULE_BREAKINGNEWS_H
 #define MODULE_BREAKINGNEWS_H
 
+#include "Config.h"
+#include "Player.h"
 #include "ScriptMgr.h"
 #include "WardenWin.h"
-#include "Player.h"
-#include "Config.h"
 
+#include <algorithm>
 #include <fstream>
 #include <iostream>
-#include <algorithm>
 
 bool bn_Enabled;
 
@@ -29,7 +29,9 @@ void SendChunkedPayload(Warden* warden, std::string payload, uint32 chunkSize);
 class BreakingNewsServerScript : ServerScript
 {
 public:
-    BreakingNewsServerScript() : ServerScript("BreakingNewsServerScript") { }
+    BreakingNewsServerScript() : ServerScript("BreakingNewsServerScript", {
+        SERVERHOOK_CAN_PACKET_SEND
+    }) { }
 
 private:
     bool CanPacketSend(WorldSession* session, WorldPacket& packet) override;
@@ -40,7 +42,9 @@ private:
 class BreakingNewsWorldScript : public WorldScript
 {
 public:
-    BreakingNewsWorldScript() : WorldScript("BreakingNewsWorldScript") { }
+    BreakingNewsWorldScript() : WorldScript("BreakingNewsWorldScript", {
+        WORLDHOOK_ON_AFTER_CONFIG_LOAD
+    }) { }
 
 private:
     void OnAfterConfigLoad(bool reload) override;
